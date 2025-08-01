@@ -25,4 +25,20 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
+//prints a triangle using the triangle method and using some code from print_sqaure to make the base
+void print_arrow(int leftCol, int size)
+{
+  print_triangle(leftCol, size);
+  
+  int baseHeight = size / 2;
+  int baseWidth = size;
 
+  int baseLeftCol = leftCol + size / 2;
+
+  for(int row = 0; row < baseHeight; row++){
+    int col;
+    for(col = 0; col < baseLeftCol; col++) putchar(' ');
+    for(       ; col < baseLeftCol + baseWidth; col++) putchar('*');
+    putchar('\n');
+  }
+}
